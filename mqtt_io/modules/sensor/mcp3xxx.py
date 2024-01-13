@@ -189,7 +189,7 @@ class Sensor(GenericSensor):
                 device=sensor_spi_device,
             )
         else:
-            raise RuntimeConfigError("Unsupported MCP type: %s" % sensor_type)
+            raise RuntimeConfigError(f"Unsupported MCP type: {sensor_type}")
 
     def get_value(self, sens_conf: ConfigType) -> SensorValueType:
         """
